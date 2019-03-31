@@ -5,9 +5,13 @@ O RestaurantApi é um programa que permite o gerenciamento de cardápios, de mod
 # Metodologia de Trabalho
 
    A metodologia de trabalho foi baseada no DDD (Domain Driven Design) e no TDD (Test Driven Development).
+
    A primeira metodologia tem como intuito separar as partes do programa em unidades de domínio que são expressivas para o negócio que estamos tratando.
+
    A segunda metodologia foi utilizada para construir os testes antes mesmo de existirem as classes, o que ajudou muito na formatação e consciência do que as classes deveriam ter e fazer, assim como ajudou a pensar em como implementá-las.
+
    A documentação do modelo das classes foi realizada de forma não muito abrangente para não dispender de muito tempo.
+   
    Isso foi feito pensando em uma das frases da metodologia Agile, que defende que se deve valorizar mais o funcionamento do código do que a documentação abrangente. 
 
 > Software em funcionamento mais que documentação abrangente
