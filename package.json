@@ -14,7 +14,7 @@
     "url": "git+https://github.com/Mtsmachado8/restaurantApi.git"
   },
   "engines": {
-    "node": "11.10.0"
+    "node": "10.15.3"
   },
   "author": "mtsmachado8",
   "license": "ISC",
