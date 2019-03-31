@@ -1,0 +1,55 @@
+{
+  "name": "restaurant-api",
+  "version": "1.0.0",
+  "description": "A great Api for a great customer",
+  "main": "index.js",
+  "scripts": {
+    "start": "export NODE_ENV=dev&&export gymifie_jwtPrivateKey=secret&& babel-node index.js",
+    "dev": "export NODE_ENV=dev&& export gymifie_jwtPrivateKey=secret&& nodemon",
+    "test": "export NODE_ENV=test&& jest --watchAll --verbose --runInBand",
+    "coverage": "export NODE_ENV=test&& jest --runInBand --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mtsmachado8/restaurantApi.git"
+  },
+  "engines": {
+    "node": "11.10.0"
+  },
+  "author": "mtsmachado8",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mtsmachado8/restaurantApi/issues"
+  },
+  "homepage": "https://github.com/Mtsmachado8/restaurantApi#readme",
+  "dependencies": {
+    "@babel/runtime": "7.2.0",
+    "config": "3.0.1",
+    "express": "^4.16.4",
+    "express-async-errors": "^3.1.1",
+    "joi": "^14.3.1",
+    "winston": "2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.3.4",
+    "@babel/node": "7.2.2",
+    "@babel/preset-env": "7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.2.0",
+    "@babel/plugin-transform-regenerator": "7.0.0",
+    "@babel/plugin-transform-runtime": "7.2.0",
+    "babel-cli": "^7.0.0-0",
+    "jest": "^24.1.0",
+    "supertest": "3.3.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./tests/testSetupFile.js"
+    ],
+    "coverageReporters": [
+      "json",
+      "html"
+    ],
+    "testURL": "http://localhost/"
+  }
+}
