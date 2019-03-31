@@ -4,12 +4,14 @@ O RestaurantApi é um programa que permite o gerenciamento de cardápios, de mod
 
 # Metodologia de Trabalho
 
-A metodologia de trabalho foi baseada no DDD (Domain Driven Design) e no TDD (Test Driven Development). 
-A primeira metodologia tem como intuito separar as partes do programa em unidades de domínio que são expressivas para o negócio que estamos tratando.
-A segunda metodologia foi utilizada para construir os testes antes mesmo de existirem as classes, o que ajudou muito na formatação e consciência do que as classes deveriam ter e fazer, assim como ajudou a pensar em como implementá-las.
-A documentação do modelo das classes foi realizada de forma não muito abrangente para não dispender de muito tempo. Isso foi feito pensando em uma das frases da metodologia Agile, que defende que se deve valorizar mais o funcionamento do código do que a documentação abrangente. 
+   A metodologia de trabalho foi baseada no DDD (Domain Driven Design) e no TDD (Test Driven Development).
+   A primeira metodologia tem como intuito separar as partes do programa em unidades de domínio que são expressivas para o negócio que estamos tratando.
+   A segunda metodologia foi utilizada para construir os testes antes mesmo de existirem as classes, o que ajudou muito na formatação e consciência do que as classes deveriam ter e fazer, assim como ajudou a pensar em como implementá-las.
+   A documentação do modelo das classes foi realizada de forma não muito abrangente para não dispender de muito tempo.
+   Isso foi feito pensando em uma das frases da metodologia Agile, que defende que se deve valorizar mais o funcionamento do código do que a documentação abrangente. 
 
 > Software em funcionamento mais que documentação abrangente
+
 > "Mesmo havendo valor nos itens à direita, valorizamos mais os itens à esquerda."
 
 # Design do Código
@@ -24,7 +26,7 @@ Esse desenho ilustra os diferentes domínios presentes no projeto. Esses domíni
 Esse domínio tem como "Aggregate Root" a classe CheckoutManager, que contém uma coleção de dados chamada menuItens do tipo MenuItem[] e outra chamada availableSales do tipo Sale[]. nessa classe também estão presentes os métodos addMenuItem(), removeMenuItem() e price(), de modo que a partir dessa classe seja possível calcular o preço final dos produtos em tempo real.
 Através dessa estratégia é possível aumentar ou diminuir o preço dos produtos a qualquer hora. O preço final será sempre calculado considerando o valor mais recente dos ingredientes.
 
-O domínio Business está conecado com o dominio Products e Sales para que seja possível o gerenciamento do negócio do cliente.
+O domínio Business está conectado com o dominio Products e Sales para que seja possível o gerenciamento do negócio do cliente.
 Todas as regras do negócio do cliente estarão presentes nesse domínio, e a princípio ficarão todas no CheckoutManager.
 Essa classe poderá, no futuro, conter outras classes de gerenciamento conforme a necessidade do cliente aumente e as regras de negócio se expandam.
 
@@ -65,7 +67,7 @@ Clonar o projeto em sua máquina local
 $ git clone https://github.com/Mtsmachado8/restaurantApi.git
 ```
 
-Instalar as Dependências e Dependências de Desenvolvimento para iniciar a api
+Instalar as Dependências e Dependências de Desenvolvimento e iniciar a api
 
 ```sh
 $ cd restaurantApi
