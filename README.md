@@ -25,6 +25,8 @@ Além disso, o desenho permitiu a realização de um plano anterior à escrita d
 
 Esse desenho ilustra os diferentes domínios presentes no projeto. Esses domínios são: Business, Sales e Product e serão apresentados a seguir.
 
+![alt text](https://github.com/Mtsmachado8/restaurantApi/model-design.jpeg)
+
 ### Business
 
 Esse domínio tem como "Aggregate Root" a classe CheckoutManager, que contém uma coleção de dados chamada menuItens do tipo MenuItem[] e outra chamada availableSales do tipo Sale[]. nessa classe também estão presentes os métodos addMenuItem(), removeMenuItem() e price(), de modo que a partir dessa classe seja possível calcular o preço final dos produtos em tempo real.
