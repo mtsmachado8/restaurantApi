@@ -1,9 +1,9 @@
-import MenuItemRepository from "../../../infra/repositories/menu-item-repository";
+import MenuItemRepository from '../../../infra/repositories/menu-item-repository'
 import log from 'winston'
 
 describe('MenuItem tests', () => {
     let repository;
-    let menu_itens = [];
+    let menu_items = [];
 
     beforeEach(async () => {
        
@@ -13,13 +13,12 @@ describe('MenuItem tests', () => {
         return ingredients.map(i => i.price).reduce((totalPrice, price) => totalPrice + price)
     };
 
-    it('Should return the correct value of MenuItens', async () => {
+    it('Should return the correct value of MenuItems', async () => {
         repository = new MenuItemRepository();
-        await repository.initDefaultMenuItens();
-        menu_itens = repository.menuItens;
+        await repository.initDefaultMenuitems();
+        menu_items = repository.menuitems;
         
-        log.error(`menuItens ${menu_itens.map(menu_item => menu_item.name)}`);
-        const xBacon = menu_itens.find(menu_item => menu_item.name === 'X-Bacon');
-        expect(xBacon.price).toEqual(ingredientsSumPrice(xBacon.ingredients));
+        const x_bacon = menu_items.find(menu_item => menu_item.name === 'X-Bacon');
+        expect(x_bacon.price).toEqual(ingredientsSumPrice(x_bacon.ingredients));
     });
 });

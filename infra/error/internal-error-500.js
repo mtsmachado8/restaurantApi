@@ -1,4 +1,4 @@
-import CodeError from "./parent-errors/code-error";
+import CodeError from './parent-errors/code-error'
 
 export default class InternalError extends CodeError{
 

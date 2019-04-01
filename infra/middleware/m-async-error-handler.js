@@ -1,6 +1,6 @@
 import log from 'winston'
-import ApiError from '../error/parent-errors/api-error';
-import InternalError from '../error/internal-error-500';
+import ApiError from '../error/parent-errors/api-error'
+import InternalError from '../error/internal-error-500'
 
 export default function(err, req, res, next){
 
