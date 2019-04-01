@@ -1,5 +1,4 @@
 {
   "jwtPrivateKey": "1234",
-  "db": "mongodb://localhost/gymifie",
   "logging_level": "silly"
 }

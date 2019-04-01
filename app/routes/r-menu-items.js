@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
-
-import repository from '../../infra/repositories/repository'
+import Repository from '../../infra/repositories/repository'
+import 'express-async-errors'
 
 // -Get all MenuItems
 router.get('/', async (req, res) => {
-	const ingredients = await repository.getMenuItems();
-	res.status(200).send(ingredients);
+	const repository = new Repository();
+	const menuItems = await repository.menuItems;
+	res.status(200).send(menuItems);
 });
 
 export default router;

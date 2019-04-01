@@ -1,5 +1,4 @@
 {
   "jwtPrivateKey": "1234",
-  "db": "mongodb://localhost/gymifie_integration_tests",
   "logging_level": "silly"
 }

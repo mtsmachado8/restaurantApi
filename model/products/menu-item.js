@@ -1,5 +1,6 @@
 import Ingredient from './ingredient'
 import log from 'winston'
+import Repository from '../../infra/repositories/repository';
 
 export default class MenuItem{
     
@@ -16,9 +17,8 @@ export default class MenuItem{
     }
 
     get price(){
-        // log.error(`MenuItem ${this.name} has ingredients ${this.ingredients.map(i => i.name)} with prices ${this.ingredients.map(i => i.price)}`);
-        const price = this.ingredients.map(i => i.price).reduce((totalPrice, price) => totalPrice + price); //@TODO test
-        // log.error(`MenuItem ${this.name} has price ${price}`);
+        const price = this.ingredients.map(i => i.price).reduce((totalPrice, price) => totalPrice + price);
+        log.info(`Price of the ingredients ${this.ingredients.map(i => i.name + " ")} is ${price}`);
         return price;
     }
 

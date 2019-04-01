@@ -1,5 +1,4 @@
 {
   "jwtPrivateKey": "jwtSecretKey",
-  "db": "mongodb://localhost/gymifie",
   "logging_level": "error"
 }

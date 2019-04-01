@@ -4,6 +4,9 @@ import Ingredient from '../products/ingredient'
 import FreeIngredientsSale from "../sales/parent-sales/free-ingredients-sale"
 import PercentageSale from "../sales/parent-sales/percentage-sale"
 import log from 'winston'
+import LightSale from '../sales/light-sale';
+import LotsOfCheeseSale from '../sales/lots-of-cheese-sale';
+import LotsOfMeatSale from '../sales/lots-of-meat-sale';
 
 export default class CheckoutManager{
     /**
@@ -11,7 +14,7 @@ export default class CheckoutManager{
      * @param {MenuItem[]} menuItems 
      * @param {ISale[]} availableSales 
      */
-    constructor(menuItems, availableSales){
+    constructor(menuItems, availableSales = [new LightSale(), new LotsOfCheeseSale, new LotsOfMeatSale]){
         this.menuItems = menuItems;
         this.availableSales = availableSales;
     }
@@ -85,7 +88,7 @@ export default class CheckoutManager{
      */
     get price(){
         log.info(`Getting the final price dynamically`);
-        let total_price = 0
+        let total_price = 0;
         this.menuItems.forEach(menu_item => {
             let menu_item_price = (menu_item.price - this._getFreeIngredientsPrice(menu_item));
             total_price += menu_item_price - (menu_item_price * this._getDiscount(menu_item));

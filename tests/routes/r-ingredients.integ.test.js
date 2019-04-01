@@ -26,7 +26,6 @@ describe('/api/v1/ingredients', () => {
 			const res = await executeGetRequest();
 
 			expect(res.status).toBe(200);
-			log.error('errorrr', res.body);
 			expect(res.body).toHaveLength(repository.ingredients.length);
 		});
     });

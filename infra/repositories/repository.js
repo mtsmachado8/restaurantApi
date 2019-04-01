@@ -9,6 +9,7 @@ export default class Repository{
             Repository.instance = this;
             this._menuItems = menuItems;
             this._ingredients = ingredients;
+            this.initDefaultMenuItems();
         }
         
         return Repository.instance;
