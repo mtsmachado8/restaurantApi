@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-import Repository from '../../infra/repositories/repository'
+import repository from '../../infra/repositories/repository'
 
-// -Get all ingredients
+// -Get all MenuItems
 router.get('/', async (req, res) => {
-	let repository = new Repository();
-	const ingredients = await repository.ingredients;
+	const ingredients = await repository.getMenuItems();
 	res.status(200).send(ingredients);
 });
 

@@ -10,7 +10,7 @@ O RestaurantApi é um programa que permite o gerenciamento de cardápios, de mod
 
    A segunda metodologia foi utilizada para construir os testes antes mesmo de existirem as classes, o que ajudou muito na formatação e consciência do que as classes deveriam ter e fazer, assim como ajudou a pensar em como implementá-las.
 
-   A documentação do modelo das classes foi realizada de forma não muito abrangente para não dispender de muito tempo.
+   A documentação do modelo das classes foi realizada de forma não muito abrangente para não despender muito tempo.
    
    Isso foi feito pensando em uma das frases da metodologia Agile, que defende que se deve valorizar mais o funcionamento do código do que a documentação abrangente. 
 
@@ -30,7 +30,7 @@ Esse desenho ilustra os diferentes domínios presentes no projeto. Esses domíni
 ### Business
 
 Esse domínio tem como "Aggregate Root" a classe CheckoutManager, que contém uma coleção de dados chamada menuItens do tipo MenuItem[] e outra chamada availableSales do tipo Sale[]. nessa classe também estão presentes os métodos addMenuItem(), removeMenuItem() e price(), de modo que a partir dessa classe seja possível calcular o preço final dos produtos em tempo real.
-Através dessa estratégia é possível aumentar ou diminuir o preço dos produtos a qualquer hora. O preço final será sempre calculado considerando o valor mais recente dos ingredientes.
+Através dessa estratégia é possível aumentar ou diminuir o preço dos produtos a qualquer hora, assim como fazer reajustes pela inflação. O preço final será sempre calculado considerando o valor mais recente dos ingredientes.
 
 O domínio Business está conectado com o dominio Products e Sales para que seja possível o gerenciamento do negócio do cliente.
 Todas as regras do negócio do cliente estarão presentes nesse domínio, e a princípio ficarão todas no CheckoutManager.
@@ -63,7 +63,7 @@ Como alternativa também podemos, com pouca mudança no código, utilizar uma es
 
 A língua inglesa foi utilizada para representar o domínio porque essa startup pode crescer e se expandir para o plano internacional, de modo que se torna necessário o uso de uma linguagem ubíqua, assim, todos podem se comunicar de maneira universal. 
 
-### Instalação
+# Instalação
 
 RestaurantApi requer [Node.js] v10.15.3+ para iniciar.
 Favor fazer download e instalação do mesmo antes de prosseguir (https://nodejs.org/).

@@ -1,4 +1,4 @@
-import MenuItemRepository from '../../../infra/repositories/menu-item-repository'
+import Repository from '../../../infra/repositories/repository'
 import log from 'winston'
 import CheckoutManager from '../../../model/business/checkout-manager';
 import LightSale from '../../../model/sales/light-sale';
@@ -22,10 +22,10 @@ describe('MenuItem tests', () => {
         lotsOfMeatSale = new LotsOfMeatSale();
         lotsOfCheeseSale = new LotsOfCheeseSale();
 
-        repository = new MenuItemRepository();
+        repository = new Repository();
 
-        await repository.initDefaultMenuitems();
-        menu_items = repository.menuitems;
+        await repository.initDefaultMenuItems();
+        menu_items = repository.menuItems;
     });
 
     afterEach(async () => {

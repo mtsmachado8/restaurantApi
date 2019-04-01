@@ -1,12 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-import Repository from '../../infra/repositories/repository'
+import repository from '../../infra/repositories/repository'
 
-// -Get all ingredients
+// -Get the final price of MenuItem collection
 router.get('/', async (req, res) => {
-	let repository = new Repository();
-	const ingredients = await repository.ingredients;
+	const ingredients = await repository.getIngredients();
 	res.status(200).send(ingredients);
 });
 

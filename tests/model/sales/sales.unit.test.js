@@ -1,4 +1,4 @@
-import MenuItemRepository from '../../../infra/repositories/menu-item-repository'
+import Repository from '../../../infra/repositories/repository'
 import LotsOfMeatSale from '../../../model/sales/lots-of-meat-sale'
 import LotsOfCheeseSale from '../../../model/sales/lots-of-cheese-sale'
 
@@ -12,9 +12,9 @@ describe('MenuItem tests', () => {
     let menu_items = [];
 
     beforeEach(async () => {
-        repository = new MenuItemRepository();
-        await repository.initDefaultMenuitems();
-        menu_items = repository.menuitems;
+        repository = new Repository();
+        await repository.initDefaultMenuItems();
+        menu_items = repository.menuItems;
         
     });
 
