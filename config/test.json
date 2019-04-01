@@ -1,4 +1,4 @@
 {
   "jwtPrivateKey": "1234",
-  "logging_level": "silly"
+  "logging_level": "warn"
 }

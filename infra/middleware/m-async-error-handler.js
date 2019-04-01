@@ -6,7 +6,7 @@ export default function(err, req, res, next){
 
 	// Returning known errors with the respective status and messages
 	if(err instanceof ApiError){
-		log.silly(err.stack);
+		log.info(err.stack);
 		log.error(`${err.message} (Code ${err.code} Status ${err.status})`);
 
 		return res.status(err.status).code(err.code).send(err.message);
