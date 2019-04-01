@@ -25,7 +25,7 @@ Além disso, o desenho permitiu a realização de um plano anterior à escrita d
 
 Esse desenho ilustra os diferentes domínios presentes no projeto. Esses domínios são: Business, Sales e Product e serão apresentados a seguir.
 
-![alt text](https://github.com/Mtsmachado8/restaurantApi/model-design.jpeg)
+![alt text](https://github.com/Mtsmachado8/restaurantApi/blob/master/model-design.jpeg)
 
 ### Business
 
